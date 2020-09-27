@@ -1,3 +1,5 @@
+require('dotenv').config()
+const PORT = process.env.PORT || 8080
 const express = require('express')
 const router = express.Router()
 const cors = require('cors')
@@ -14,4 +16,4 @@ app.get('/calcnumplate/:data', calculatePlates)
 
 
 //app.use('/api', router)
-app.listen(8080, () => console.log(`${name} ${version} up and running on port 8080`))
+app.listen(PORT, () => console.log(`${name} ${version} up and running on port ${PORT}`))
