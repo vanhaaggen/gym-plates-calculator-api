@@ -1,12 +1,12 @@
 require('dotenv').config()
-const PORT = process.env.PORT || 8080
+
 const express = require('express')
-const router = express.Router()
 const cors = require('cors')
-//const bodyParser = require('body-parser')
-//const jsonBodyParser = bodyParser.json()
+
 const { name, version } = require('./package')
 const calculatePlates = require('./routes/calc-num-plates')
+
+const { env: { PORT } } = process
 
 const app = express()
 app.use(cors())
