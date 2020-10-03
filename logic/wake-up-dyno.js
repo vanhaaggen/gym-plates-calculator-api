@@ -1,5 +1,7 @@
-const { env: { PORT } } = process
+const {
+  env: { PORT },
+} = process
 
 module.exports = async function () {
-    return `Heroku server is running on port ${PORT} `
+  return `Heroku server is running on port ${PORT} `
 }
